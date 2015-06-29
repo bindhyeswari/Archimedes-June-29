@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Selectors</title>
+    <style>
+
+
+        /**
+            4 numbers --> 0 0 0 0
+            <inline> <id> <class/attribute> <element>
+        */
+
+        div { /* 0 0 0 1 */
+            padding: 0.35em 0.5em;
+            margin: 0.25em;
+            font: 300 1em 'Helvetica Neue', 'Segoe UI', 'Droid Sans', 'sans-serif';
+            background-color: #eee;
+        }
+
+        .myclass { /* 0 0 1 0 */
+            background-color: #ddd; /* #abc --> #aabbcc --> R aa, G bb, B cc --> rgb(170, 187, 204) */
+        }
+
+        [data-myattr] { /* 0 0 1 0 */
+            background-color: #bbb;
+        }
+
+        #mydiv { /* 0 1 0 0 */
+            background-color: #aaa;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<ul>
+    <li>Important</li>
+    <li>Specificity</li>
+    <li>Cascade</li>
+</ul>
+
+<div>Element Selector</div>
+<div class="myclass">Class Selector</div>
+<div data-myattr="mydiv">Attribute Selector</div>
+<div id="mydiv">ID Selector</div>
+<div style="background-color: #777; /* 1 0 0 0 */;">Inline Tag</div>
+
+
+</body>
+</html>
