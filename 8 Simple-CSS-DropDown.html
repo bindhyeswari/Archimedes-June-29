@@ -5,14 +5,51 @@
     <title>Simple CSS DropDown</title>
     <style>
 
-        ul.submenu {
-            display: none;
+        body {
+            font: 300 1em 'Helvetica Neue';
         }
+
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: #eee;
+        }
+
+        div:hover {
+            background-color: #aaa;
+            /* Warning: CSS3 Ahead */
+            transition: background-color 500ms ease;
+        }
+
+        ul.menu {
+            list-style-type: none;
+            border: 1px solid gray;
+            padding: 1em;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        ul.menu > li {
+            padding: 0.35em 0.5em;
+            margin: 0.25em;
+            background-color: #eee;
+            float: left;
+        }
+
+        ul.submenu {
+            list-style-type: none;
+            padding: 0;
+        }
+
         
     </style>
 </head>
 <body>
-    <ul class="menu">
+    <ul class="menu clearfix">
         <li>Company Name</li>
         <li>Analytics</li>
         <li>Business Intelligence</li>
@@ -25,5 +62,9 @@
             </ul>
         </li>
     </ul>
+
+    <div>
+
+    </div>
 </body>
 </html>
