@@ -3,17 +3,44 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Hover</title>
+    <style>
+
+        body {
+            font: 300 1em 'Helvetica Neue';
+        }
+
+        ul > li > span {
+            display: inline-block;
+            padding: 0.35em 0.5em;
+            background-color: #eee;
+        }
+
+        em {
+            color: white;
+        }
+
+        li {
+            margin: 0.5em;
+            cursor: pointer;
+        }
+
+        em:hover {
+            color: black;
+            transition: color 500ms ease;
+        }
+
+    </style>
 </head>
 <body>
 
     <ul>
         <li>
             <span class="key">Name</span>
-            <span class="value">Glenn Holt</span>
+            <em>Glenn Holt</em>
         </li>
         <li>
             <span class="key">Designation</span>
-            <span class="value">UI Developer</span>
+            <em>UI Developer</em>
         </li>
     </ul>
 
