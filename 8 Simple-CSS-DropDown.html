@@ -23,7 +23,7 @@
 
         ul.menu {
             list-style-type: none;
-            border: 1px solid gray;
+            /*border: 1px solid gray;*/
             padding: 1em;
         }
 
@@ -43,7 +43,29 @@
         ul.submenu {
             list-style-type: none;
             padding: 0;
+            padding-left: 0.5em;
         }
+
+        ul.submenu > li {
+            font-size: 0.85em;
+            padding: 0.35em 0.5em;
+            margin: 0.15em;
+            background-color: #aaa;
+            color: black;
+        }
+
+        ul.submenu {
+            display: none;
+        }
+
+        ul.menu > li:hover > ul.submenu {
+            display: block;
+        }
+
+        ul.menu > li:hover {
+
+        }
+
 
         
     </style>
@@ -64,7 +86,12 @@
     </ul>
 
     <div>
-
+        <div>
+            Div
+        </div>
+        <section>
+            Section
+        </section>
     </div>
 </body>
 </html>
