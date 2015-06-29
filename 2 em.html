@@ -2,9 +2,53 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Em</title>
+    <style>
+
+        button {
+            padding: 1em;
+            background-color: red;
+            color: white;
+            border: 1px solid darkred;
+            font: 300 1em 'Helvetica Neue';
+            cursor: pointer;
+
+        }
+
+        .mybutton {
+            font-size: 2em; /* 32px */
+            padding: 1em; /*  */
+        }
+
+        div {
+            font-size: 13px; /* 32px */
+            border: 0.15em solid gray;
+            padding: 1em;
+            margin: 1em;
+        }
+
+        div > button {
+            font-size: 2em; /* 64px */
+        }
+
+    </style>
+
 </head>
 <body>
+
+    <button>
+        Click Me!
+    </button>
+    <button class="mybutton">
+        Click Me!
+    </button>
+
+    <div>
+        <button>
+            Button inside Div
+        </button>
+    </div>
+
 
 </body>
 </html>

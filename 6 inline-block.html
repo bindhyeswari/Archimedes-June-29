@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Inline-Blocks</title>
+    <style>
+
+        body {
+            font: 300 1em 'Helvetica Neue';
+        }
+
+        ul.first, ul.second {
+            padding: 1em;
+            list-style-type: none;
+            border: 1px solid black;
+        }
+
+        ul.first > li, ul.second > li {
+            background-color: red;
+            width: 2em;
+            color: white;
+            text-align: center;
+            border: 1px solid darkred;
+            line-height: 2em;
+        }
+
+        ul.first > li {
+            display: inline-block;
+        }
+
+        ul.second > li {
+            float: left;
+        }
+
+        ul.second > li.no-float {
+            float: none;
+            width: auto;
+
+            clear: left;
+
+        }
+
+        ul.second > li.float {
+            font-size: 3em;
+            background-color: rgba(139, 0, 0, 0.39);
+        }
+
+
+
+
+        /* Difference between floats and inline-blocks
+
+         1. Spacing issue with inline-blocks
+         2. Collapse issue with floats
+            Solution to this is known as the "clearfix"
+         https://css-tricks.com/all-about-floats/
+
+         */
+
+
+        /* CSS3 Pseudo-Elements Approach */
+
+        /*
+            block, clear, content: ''
+        */
+
+        .clearfix::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <ul class="first">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <ul class="second">
+        <li class="float">1</li>
+        <li class="float">2</li>
+        <li class="float">3</li>
+        <li class="no-float">I do not have a float!</li>
+    </ul>
+
+    <ul class="second clearfix">
+        <li class="float">1</li>
+        <li class="float">2</li>
+        <li class="float">3</li>
+    </ul>
+
+
+</body>
+</html>
